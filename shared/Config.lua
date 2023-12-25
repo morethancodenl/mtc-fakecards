@@ -10,24 +10,29 @@ Config = {
     Items = {
         ['id_card'] = {
             Info = {
-                Firstname = true,
-                Lastname = true,
-                Country = true,
-                DateofBirth = true,
+                Firstname = true, -- enable or disable
+                Lastname = true, -- enable or disable
+                Country = true, -- enable or disable 
+                DateofBirth = true, -- enable or disable
             },
             Price = 500
         },
         ['driver_license'] = {
             Info = {
-                Firstname = true,
-                Lastname = true,
-                Country = false,
-                DateofBirth = true,
+                Firstname = true, -- enable or disable
+                Lastname = true, -- enable or disable
+                Country = false, -- enable or disable
+                DateofBirth = true, -- enable or disable
             },
             Price = 500
         },
     },
 
+    ForgeTime = 10, -- in Seconds
+    BlacklistedJobs = {
+        'police',
+        'ambulance'
+    },
     Location = {
         Coords = vector4(-237.27, -989.43, 29.13, 211.71),
         Model = `g_m_y_armgoon_02`,

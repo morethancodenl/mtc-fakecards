@@ -49,7 +49,7 @@ RegisterNetEvent('mtc-fakecards:Client:OpenInputQb', function (data)
         }
 
         if Config.Progressbar == 'qb' then
-            QBCore.Functions.Progressbar("forging", Lang:t('Progressbar.Forging'), 5000, false, true, {
+            QBCore.Functions.Progressbar("forging", Lang:t('Progressbar.Forging'), Config.ForgeTime * 1000, false, true, {
                 disableMovement = true,
                 disableCarMovement = false,
                 disableMouse = false,
@@ -62,7 +62,7 @@ RegisterNetEvent('mtc-fakecards:Client:OpenInputQb', function (data)
         elseif Config.Progressbar == 'ox' then
 
             if lib.progressCircle({
-                duration = 5000,
+                duration = Config.ForgeTime * 1000,
                 position = 'bottom',
                 label = Lang:t('Progressbar.Forging'),
                 useWhileDead = false,
@@ -126,7 +126,7 @@ RegisterNetEvent('mtc-fakecards:Client:OpenInputQb', function (data)
         }
 
         if Config.Progressbar == 'qb' then
-            QBCore.Functions.Progressbar("forging", Lang:t('Progressbar.Forging'), 5000, false, true, {
+            QBCore.Functions.Progressbar("forging", Lang:t('Progressbar.Forging'), Config.ForgeTime * 1000, false, true, {
                 disableMovement = true,
                 disableCarMovement = false,
                 disableMouse = false,
@@ -139,7 +139,7 @@ RegisterNetEvent('mtc-fakecards:Client:OpenInputQb', function (data)
         elseif Config.Progressbar == 'ox' then
 
             if lib.progressCircle({
-                duration = 5000,
+                duration = Config.ForgeTime * 1000,
                 position = 'bottom',
                 label = Lang:t('Progressbar.Forging'),
                 useWhileDead = false,
@@ -384,6 +384,14 @@ CreateThread(function ()
                     label = Lang:t('Target.Hello'),
                     action = function()
                        openMenu()
+                    end,
+                    canInteract = function ()
+                        local player = QBCore.Functions.GetPlayerData()
+
+                        for _,v in pairs(Config.BlacklistedJobs) do
+                            if not player.job.name == v then return true end
+                            return false
+                        end
                     end,
                     duty = true,
                 },
