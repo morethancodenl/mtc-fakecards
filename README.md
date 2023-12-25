@@ -4,14 +4,16 @@ IMAGE SOON.
 A fake cards script for QBCore or Qbox Framework, within the script we focused on usability. In our script you have the choice to make different fake cards with different details. This is completely adjustable to make your server according to your own wishes.
 
 ## 💾 Dependencies
-- SOON
+- QB-Menu or ox_lib
+- QB-Input or ox_lib
+- QB-Inventory or ox-inventory
 
 ## 🔌 Installation
 To get started with the MTC fake cards resource, follow these steps:
 
 1. Clone this repository and place the files into your designated resources folder.
 2. Rename the script file to ```mtc-fakecards```.
-3. SOON?
+3. Setup your own Config and choose the right framework
 
 ## 🖼️ Showcase
 
