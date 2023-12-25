@@ -256,7 +256,7 @@ CreateThread(function ()
         ped = sellPed
         FreezeEntityPosition(sellPed, true)
         SetEntityInvincible(sellPed, true)
-        TaskStartScenarioInPlace(cittyHallPed, 'WORLD_HUMAN_HUMAN_STATUE', 0, true)
+        TaskStartScenarioInPlace(sellPed, 'WORLD_HUMAN_HUMAN_STATUE', 0, true)
         SetBlockingOfNonTemporaryEvents(sellPed, true)
         exports['qb-target']:AddTargetEntity(sellPed, {
             options = {
