@@ -28,6 +28,7 @@ return {
             'Jesse',
             'Jared',
             'Jorge',
+            'Thijmen', -- Its the real Thijmen, You don't believe it? Check the credits of the script :D
         },
         female = {
             'Nancy',
