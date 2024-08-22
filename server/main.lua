@@ -14,13 +14,13 @@ end
 --- Forges a Custom Card for a specific item
 ---@param item any
 ---@param itemData any
-RegisterNetEvent('mtc-fakecards:server:forgeCard', function (item, itemData)
+RegisterNetEvent('mtc-fakecards:server:forgeCard', function (item, itemData, id)
     local src = source
     local player = exports.qbx_core:GetPlayer(src)
     local pCoords = GetEntityCoords(GetPlayerPed(src))
 
     -- Checks the distance
-    local distance = #(Config.Ped.coords.xyz - pCoords)
+    local distance = #(Config.Ped.coords[id].xyz - pCoords)
     -- Checks if the distance is larger than 5 then it will be a cheater
     if distance > 5.0 then return end
 

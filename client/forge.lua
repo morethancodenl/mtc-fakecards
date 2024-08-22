@@ -1,11 +1,11 @@
 local Config = require 'config.config'
 
---- Client side event for forging a card with a specific item such as a progressbar
----@param item any
+--- Client side event for forging a card with a progressbar
+---@param item string
 ---@param vData any
-RegisterNetEvent('mtc-fakecards:client:forgeCards', function (item, vData)
+RegisterNetEvent('mtc-fakecards:client:forgeCards', function (item, vData, id)
     local pCoords = GetEntityCoords(cache.ped)
-    local distance = #(Config.Ped.coords.xyz - pCoords)
+    local distance = #(Config.Ped.coords[id].xyz - pCoords)
 
     -- Checks if the distance is larger than 5 then it will be a cheater
     if distance > 5.0 then return end
@@ -28,7 +28,7 @@ RegisterNetEvent('mtc-fakecards:client:forgeCards', function (item, vData)
         }
     }) then 
         -- Triggers the server event to forge the card
-        TriggerServerEvent('mtc-fakecards:server:forgeCard', item, vData) 
+        TriggerServerEvent('mtc-fakecards:server:forgeCard', item, vData, id) 
     end
 end)
 

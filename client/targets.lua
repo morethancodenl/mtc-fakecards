@@ -3,7 +3,7 @@ local spawnedPed = nil
 local Config = require 'config.config'
 
 -- Creates a new point
-for _ , coords in pairs(Config.Ped.coords) do
+for id , coords in pairs(Config.Ped.coords) do
     local point = lib.points.new({coords = coords.xyz, distance = 15})
 
     --- On the player entering the point it will create the eped
@@ -32,6 +32,9 @@ for _ , coords in pairs(Config.Ped.coords) do
                 icon = 'fas fa-id-card',
                 distance = 1.5,
                 event = 'mtc-fakecards:client:openMenu',
+                onSelect = function ()
+                    TriggerEvent('mtc-fakecards:client:openMenu', id)
+                end,
                 canInteract = function ()
                     -- Checks if the Player can interact if they are not a LEO
                     local player = QBX.PlayerData

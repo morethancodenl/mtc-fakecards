@@ -1,9 +1,9 @@
 local Config = require 'config.config'
 
 --- Registers the Context Menu for the player
-RegisterNetEvent('mtc-fakecards:client:openMenu', function ()
+RegisterNetEvent('mtc-fakecards:client:openMenu', function (id)
     local pCoords = GetEntityCoords(cache.ped)
-    local distance = #(Config.Ped.coords.xyz - pCoords)
+    local distance = #(Config.Ped.coords[id].xyz - pCoords)
 
     -- Checks if the distance is larger than 5 then it will be a cheater
     if distance > 5.0 then return end
@@ -24,7 +24,7 @@ RegisterNetEvent('mtc-fakecards:client:openMenu', function ()
             description  = locale('menu_desc_forge_card'):format(vData.label, vData.price),
             disabled = isDisabled,
             onSelect = function()
-                TriggerEvent('mtc-fakecards:client:forgeCards', vData.item, vData)
+                TriggerEvent('mtc-fakecards:client:forgeCards', vData.item, vData, id)
             end
         }
     end
