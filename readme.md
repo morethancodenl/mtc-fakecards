@@ -9,8 +9,9 @@ MTC-Fakecards is a script designed to give the players a possibility to fake the
 ### How to use it?
 1. Clone the repository
 2. Rename the folder to `mtc-fakecards`
-3. Configure your config in: `config/config.lua`
-4. Start the script
+3. Add the following [code](https://pastebin.com/0p2zz2jY) to `qbx_idcard/bridge/framework/qbox.lua`
+4. Configure your config in: `config/config.lua`
+5. Start the script
 
 ### Dependencies
 - [ox_lib](https://github.com/overextended/ox_lib)
