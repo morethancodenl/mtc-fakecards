@@ -2,10 +2,10 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-name 'MTC-Fakecards'
+name 'MTC-Fakecards V2'
 description 'A fake card scripts for qbox and ox_lib'
 author 'More Than Code'
-version '0.0.0'
+version '1.0.0'
 
 shared_scripts {
     '@ox_lib/init.lua',
