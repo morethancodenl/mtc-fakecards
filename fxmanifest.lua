@@ -1,19 +1,19 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
+name 'MTC-Fakecards V2'
+description 'A fake card scripts for qbox and ox_lib'
 author 'More Than Code'
-decription 'A script where players can buy fake id-cards'
-version '0.0.1'
+version '1.0.0'
 
 shared_scripts {
-    '@qb-core/shared/locale.lua',
-    'shared/*.lua',
-    'locales/*.lua',
-    'locales/*en.lua',
     '@ox_lib/init.lua',
+    '@qbx_core/modules/lib.lua',
 }
 
 client_scripts {
+    '@qbx_core/modules/playerdata.lua',
     'client/*.lua'
 }
 
@@ -21,4 +21,13 @@ server_scripts {
     'server/*.lua'
 }
 
-lua54 'yes'
+files {
+    'config/*.lua',
+    'locales/*.json'
+}
+
+dependencies {
+    'ox_lib',
+    'qbx_core',
+    'qbx_idcard'
+}
