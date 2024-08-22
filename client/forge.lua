@@ -31,3 +31,7 @@ RegisterNetEvent('mtc-fakecards:client:forgeCards', function (item, vData)
         TriggerServerEvent('mtc-fakecards:server:forgeCard', item, vData) 
     end
 end)
+
+RegisterNetEvent('mtc-fakecards:client:eventAfterPurchase', function (personData)
+   -- Do Something..... 
+end)

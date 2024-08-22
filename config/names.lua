@@ -1,6 +1,6 @@
 return {
     firstname = {
-        [0]= {
+        male = {
             'Dwayne',
             'Doug',
             'Bradley',
@@ -29,7 +29,7 @@ return {
             'Jared',
             'Jorge',
         },
-        [1] = {
+        female = {
             'Nancy',
             'Diane',
             'Lori',

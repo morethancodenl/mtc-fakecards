@@ -28,7 +28,6 @@ function point:onEnter()
     exports.ox_target:addLocalEntity(spawnedPed, {
         {
             label = locale('talk_to_ped'),
-            name = 'mtc-fakecards:interactPed',
             icon = 'fas fa-id-card',
             distance = 1.5,
             event = 'mtc-fakecards:client:openMenu',

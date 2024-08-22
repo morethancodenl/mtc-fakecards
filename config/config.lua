@@ -1,11 +1,13 @@
 return {
     Items = {
-        id_card = {
+        {
+            item = 'id_card',
             label = 'Identification Card',
             price = 250,
             icon = 'fa-solid fa-id-badge'
         },
-        driver_license = {
+        {
+            item = 'driver_license',
             label = 'Driver License',
             price = 500,
             icon = 'fa-solid fa-id-card'

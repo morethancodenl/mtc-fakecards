@@ -12,7 +12,7 @@ RegisterNetEvent('mtc-fakecards:client:openMenu', function ()
     local options = {}
 
     -- Loops through the items and addes them to the options
-    for item, vData in pairs(Config.Items) do
+    for _, vData in pairs(Config.Items) do
         local isDisabled = false
         if QBX.PlayerData.money.cash < vData.price then
             isDisabled = true
@@ -24,7 +24,7 @@ RegisterNetEvent('mtc-fakecards:client:openMenu', function ()
             description  = locale('menu_desc_forge_card'):format(vData.label, vData.price),
             disabled = isDisabled,
             onSelect = function()
-                TriggerEvent('mtc-fakecards:client:forgeCards', item, vData)
+                TriggerEvent('mtc-fakecards:client:forgeCards', vData.item, vData)
             end
         }
     end
