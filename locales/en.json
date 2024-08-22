@@ -1,0 +1,9 @@
+{
+    "ped_name":"Alexander Bach",
+    "talk_to_ped":"Talk...",
+
+    "menu_forge_card":"Forge a fake %s",
+    "menu_desc_forge_card":"Forge a fake %s for $%s",
+
+    "progress_forge":"Forging %s"
+}
