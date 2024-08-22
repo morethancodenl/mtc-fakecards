@@ -1,0 +1,9 @@
+{
+    "ped_name":"Alexander Bach",
+    "talk_to_ped":"Praten...",
+
+    "menu_forge_card":"Fabriceer een valse %s",
+    "menu_desc_forge_card":"Fabriceer een %s voor $%s",
+
+    "progress_forge":"%s fabriceren..."
+}
